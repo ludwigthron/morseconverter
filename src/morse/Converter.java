@@ -12,7 +12,7 @@ public class Converter {
 		
 		//Dubbla arrays som motsvarar varandra i morse och alfabet
 		char[] Letters = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
-				's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ',', '.', '?',
+				's', 't', 'z', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ',', '.', '?',
 				' ' };
 		String[] morse = { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--",
 				"-.", "---", ".---.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", ".----",
@@ -22,12 +22,12 @@ public class Converter {
 		
 		
 		// val mellan morse till ord eller ord till morse gjorde med do while loop
-		System.out.println("Vill du översätta bokstäver till morse eller vice versa?");
+		System.out.println("Vill du ï¿½versï¿½tta bokstï¿½ver till morse eller vice versa?");
 		System.out.println("________________________________________________________");
-		System.out.println("1 = bokstäver till morse.");
-		System.out.println("(Mata in bokstäver i följd utan mellanslag)");
-		System.out.println("2 = morse till bokstäver.");
-		System.out.println("(Mata in dina kodade bokstäver med mellanslag för varje ny bokstav)");
+		System.out.println("1 = bokstï¿½ver till morse.");
+		System.out.println("(Mata in bokstï¿½ver i fï¿½ljd utan mellanslag)");
+		System.out.println("2 = morse till bokstï¿½ver.");
+		System.out.println("(Mata in dina kodade bokstï¿½ver med mellanslag fï¿½r varje ny bokstav)");
 		do {
 			decision = scan.nextInt();
 		} while (decision < 1 || decision > 2);
@@ -36,19 +36,19 @@ public class Converter {
 		
 		String userInput = scan2.nextLine();
 		userInput = userInput.toLowerCase();
-		// if sats för åäö
-		if(userInput.equals("å")) {
+		// if sats fï¿½r ï¿½ï¿½ï¿½
+		if(userInput.equals("ï¿½")) {
 			System.out.println("That letter is not part of the english alphabet.");
 		}
-		if(userInput.equals("ä")) {
+		if(userInput.equals("ï¿½")) {
 			System.out.println("That letter is not part of the english alphabet.");
 		}
-		if(userInput.equals("ö")) {
+		if(userInput.equals("ï¿½")) {
 			System.out.println("That letter is not part of the english alphabet.");
 		}
 		
 		if (decision == 1) { 
-			// NESTED FOR LOOP SOM GÅR IGENOM FÖRST ARRAY CHAR SEN JÄMNFÖR SÅ ATT T.EX. ETT A=0 I CHAR ARRAYEN ÄR LIKA MED 0 I LETTERS ARRAY
+			// NESTED FOR LOOP SOM Gï¿½R IGENOM Fï¿½RST ARRAY CHAR SEN Jï¿½MNFï¿½R Sï¿½ ATT T.EX. ETT A=0 I CHAR ARRAYEN ï¿½R LIKA MED 0 I LETTERS ARRAY
 			char[] chars = userInput.toCharArray();	
 			for (int i = 0; i < chars.length; i++) 
 				for (int j = 0; j < Letters.length; j++) {
@@ -63,7 +63,7 @@ public class Converter {
 }
 		
 		if (decision == 2) {
-			// Samma som ovan fast morse till bokstäver.								
+			// Samma som ovan fast morse till bokstï¿½ver.								
 			String[] strings = userInput.split(" ");
 			for (int i = 0; i < strings.length; i++) {
 				for (int j = 0; j < morse.length; j++) 
